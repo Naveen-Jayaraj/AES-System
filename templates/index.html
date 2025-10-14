@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GraphBert Essay Scorer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>GraphBert AES 📝</h1>
+            <p>Enter an essay about "The Challenge of Exploring Venus" to get an AI-powered score.</p>
+        </header>
+        
+        <main>
+            <div class="input-area">
+                <textarea id="essay-input" placeholder="Paste the essay text here..."></textarea>
+                <button id="score-button">Score Essay</button>
+            </div>
+            
+            <div id="result-area" class="hidden">
+                <h2>Predicted Score</h2>
+                <div class="score-display">
+                    <span id="score-value">...</span>
+                </div>
+                <div id="loading-spinner" class="spinner hidden"></div>
+                <p id="error-message" class="hidden"></p>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Powered by PyTorch & Flask</p>
+        </footer>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
